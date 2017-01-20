@@ -1,0 +1,23 @@
+0.  BMP : 16M , GIF : 256 , PNG : 256T , JPEG : 16M
+1.  GIF
+2.  In lossy compression only a part of the original information is available back after the uncompression
+    while in lossles compression all the original information is recovered after the uncompression. 
+3.  JPEG
+4.  Deleting a file most often merely rewrites the metadata that pointed to the ﬁle.
+5.  Physically destroying the drive, rendering it unusable OR 
+    Degaussing the drive to randomize the magnetic do- mains—most likely rendering the drive unusable in the process OR 
+    Overwriting the drive’s data so that it cannot be recovered.
+6.  "stdint.h" header defines a set of integral type aliases with specific width requirements, along with macros specifying 
+    their limits and macro functions to create values of these types.
+7.  These data types allows us to use the specific size for an integer.
+8.  1,4,4,2.
+9.  The first two bytes of the BMP file format are the character 'B' then the character 'M' in 1-byte ASCII encoding.
+10. bfSize is the size, in bytes, of the bitmap file while bisize is the number of bytes required by the "BITMAPINFOHEADER" structure.
+11. biHeight is negative means the bitmap is a top-down DIB with the origin at the upper left corner.
+12. biBitCount.
+13. if the file does not exist then the pointer may return NULL.
+14. because we need to read only one element at a time.
+15. 3
+16. Sets the position indicator associated with the stream to a new position.
+17. SEEK_CUR is constant containing Current position of the file pointer.
+18. Mila Banana dun it.

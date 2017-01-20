@@ -1,0 +1,20 @@
+0.  It is an English word that refers to a lung disease that is otherwise known as silicosis. It is the longest word in the English language published in a dictionary, the Oxford English Dictionary.
+1.  getrusage()  takes rusage struct and returns  resource usage measures for the provided argument like (by using Rusage_self argument getrusage() returns measures of current process )
+2.  16 
+3.  because if we pass before and after by its values then we will have to make another 2 variables to store the data of before and after in it and it is just a waste of memmory and time!
+4.  Let's start from the begining of main.first we check for the correct arguments.Then we define rusage structs before,after to store the stattistics of the program before and after any function load. 
+    then we define variables to store the time required to load each of the functions.Then we define varibale to store dictionary name and assign argv[1] as dictionary name if we have 3 arguments 
+    else we used the standard dictinary deifned in the dictionary.h.Then we load dictionary and calculate the time before and after laoding the dictionary.we return false if the dictionary is not
+    loaded.Then we calculate time required to load dictionary using calculate function and store it in the required variable.Then we open the file to be spellchecked.Then define required varibales.
+    And now starts our for loop.We read signle character at a time and put it into the c variable.Now we check if the varibale was an character or apostrophes and the index is >0,if so we add that character
+    to the word and increase the index for that word.Also if our index is > then the length,we put index =0 and skip other characters.Else if our variable is an integer we skip over the numbers and put index=0
+    Else if index > 0 the we might have found the whole word so we add the '\0' at the end of the word and increase the words counter.Also we check if we misspelled the word, if so ,we print the misspelled word
+    and increse misspellings counter and we append the time required to check the word to the ti_check variable.Now our for loop ends. Now we check if we had any error reading the file,if so ,we return with an
+    error and unload the dictionary.Then we close the file . Then detrmine the dictionary's size and calculate the time reqired to determine dictionary's size and put it into the ti_size variable.Then we unload 
+    the dictionary and add time required to unload the dictionary in ti_unload varibale. We return with an error if we were unable to unload the dictionary.And Lastly we print the whole Stattistics.
+5.  Because we want to validate each and every character and also want to include the apostrophes in a word.Also if we had fscanf the we would not be able to include the apostrophes or and other symbol to our word.
+6.  Because we don't want to change a word or a dictionary and it should also not be change.
+7.  I used trie as my data structure.Now,my trie node contains one boolean value and the array of 27 another node pointers.
+8.  when I first ran my code successfully,it was just around 0.25-0.50 seconds.
+9.  There were not many changes made by me except for the unload function to remove leaks and some very silly changes in load function.
+10. I tried my level best but I wasn't able to free only 2 pointers in the any dictionaries..I just couldn't find the bug.
