@@ -80,5 +80,6 @@ for a in soup.find_all('a'):
             my_logger.info('Found keyword matching querry.')
             my_logger.info('Now sending email')
             send_email(message=msg.format(a['href'][2:]), logger=my_logger)
-
-my_logger.info('Nothing Found!')
+            break
+else:
+     my_logger.info('Nothing Found!')
