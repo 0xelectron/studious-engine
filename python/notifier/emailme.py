@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#! /usr/bin/env python3
 """ Email Me.
 Fork of: https://gist.github.com/alexalemi/2150894
 
