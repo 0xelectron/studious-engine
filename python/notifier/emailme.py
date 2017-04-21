@@ -59,9 +59,9 @@ or
 
 from functools import partial
 
-def send_email(message="",subject=DEFAULTSUBJECT,
+def send_email(logger, message="",subject=DEFAULTSUBJECT,
     me=DEFAULTFROM,recipients=[DEFAULTTO],
-    smtpserver="smtp.gmail.com",tls=True,login=None,
+    smtpserver="smtp.gmail.com", port='587', tls=True,login=None,
     password=None):
     """ Send an email using the gmail smtp servers, and netrc to hide the username
         and password information """
@@ -80,11 +80,24 @@ def send_email(message="",subject=DEFAULTSUBJECT,
     msg['From'] = me
     msg['To'] = ", ".join(recipients)
 
-    s = smtplib.SMTP(smtpserver, '587')
+    logger.info('From: {}'.format(me))
+    logger.info('To: {}'.format(recipients))
+    logger.info('Subject: {}'.format(subject))
+
+
+    logger.info('Connecting to smtp server: {}:{}'.format(smtpserver, port))
+    try:
+        s = smtplib.SMTP(smtpserver, port)
+    except Exception as e:
+        logger.debug('Error Occurred while connecting to smtp: {}'.format(e))
+        raise Exception
+
     if tls:
+        logger.info('Starting tls')
         s.starttls()
         s.login(login,password)
 
+    logger.info('Sending email')
     s.sendmail(me,recipients, msg.as_string())
     s.quit()
 
