@@ -1,4 +1,4 @@
-#/bin/python3
+#!/bin/python3
 #
 # Multiples of 3 and 5
 #
