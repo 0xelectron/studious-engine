@@ -1,0 +1,21 @@
+{
+  "name": "learnyounode",
+  "version": "1.0.0",
+  "description": "learn nodejs",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "../../"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "akash",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-google": "^0.9.1"
+  }
+}
