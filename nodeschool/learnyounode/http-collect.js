@@ -8,7 +8,9 @@ http.get(url, (response) => {
         if (err) {
             console.error(err);
         }
-        console.log(data.toString());
+        let d = data.toString();
+        console.log(d.length);
+        console.log(d);
     }));
     response.on('error', console.error);
 }).on('error', console.error);
