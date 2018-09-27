@@ -1,0 +1,530 @@
+Name:           dockup-1-developer20-deployment-6dd5654849-zqnzq
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer20
+                deployment_id=1
+                pod-template-hash=2881210405
+Annotations:    <none>
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer20-deployment-6dd5654849
+Containers:
+  developer20:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Limits:
+      cpu:  500m
+    Requests:
+      cpu:     500m
+      memory:  1G
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age                From               Message
+  ----     ------            ----               ----               -------
+  Warning  FailedScheduling  4m (x295 over 1h)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer21-deployment-df6fd8c9c-rrvsg
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer21
+                deployment_id=1
+                pod-template-hash=892984757
+Annotations:    <none>
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer21-deployment-df6fd8c9c
+Containers:
+  developer21:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Limits:
+      cpu:     500m
+      memory:  1G
+    Requests:
+      cpu:     500m
+      memory:  1G
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Guaranteed
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age                From               Message
+  ----     ------            ----               ----               -------
+  Warning  FailedScheduling  3m (x295 over 1h)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer22-deployment-6598b4b4f9-xnddt
+Namespace:      default
+Node:           gke-cluster-default-pool-f36f10c0-2clx/10.128.0.2
+Start Time:     Mon, 10 Sep 2018 15:19:36 +0530
+Labels:         app=dockup-1-developer22
+                deployment_id=1
+                pod-template-hash=2154606095
+Annotations:    kubernetes.io/limit-ranger=LimitRanger plugin set: cpu request for container developer22
+Status:         Pending
+IP:             10.24.0.14
+Controlled By:  ReplicaSet/dockup-1-developer22-deployment-6598b4b4f9
+Containers:
+  developer22:
+    Container ID:  
+    Image:         gcr.io/my-frontend-image:master
+    Image ID:      
+    Port:          80/TCP
+    Host Port:     0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Requests:
+      cpu:  100m
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  Initialized    True 
+  Ready          False 
+  PodScheduled   True 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason   Age                From                                             Message
+  ----     ------   ----               ----                                             -------
+  Normal   BackOff  8m (x344 over 1h)  kubelet, gke-cluster-default-pool-f36f10c0-2clx  Back-off pulling image "gcr.io/my-frontend-image:master"
+  Warning  Failed   3m (x365 over 1h)  kubelet, gke-cluster-default-pool-f36f10c0-2clx  Error: ImagePullBackOff
+
+
+Name:           dockup-1-developer23-deployment-7fd87f6957-22sfm
+Namespace:      default
+Node:           gke-cluster-default-pool-f36f10c0-2clx/10.128.0.2
+Start Time:     Mon, 10 Sep 2018 16:33:00 +0530
+Labels:         app=dockup-1-developer23
+                deployment_id=1
+                pod-template-hash=3984392513
+Annotations:    kubernetes.io/limit-ranger=LimitRanger plugin set: cpu request for container developer23
+Status:         Pending
+IP:             10.24.0.15
+Controlled By:  ReplicaSet/dockup-1-developer23-deployment-7fd87f6957
+Containers:
+  developer23:
+    Container ID:  
+    Image:         gcr.io/my-frontend-image:master
+    Image ID:      
+    Port:          80/TCP
+    Host Port:     0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    State:          Waiting
+      Reason:       ImagePullBackOff
+    Ready:          False
+    Restart Count:  0
+    Requests:
+      cpu:  100m
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  Initialized    True 
+  Ready          False 
+  PodScheduled   True 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason                 Age                From                                             Message
+  ----     ------                 ----               ----                                             -------
+  Normal   Scheduled              15m                default-scheduler                                Successfully assigned dockup-1-developer23-deployment-7fd87f6957-22sfm to gke-cluster-default-pool-f36f10c0-2clx
+  Normal   SuccessfulMountVolume  15m                kubelet, gke-cluster-default-pool-f36f10c0-2clx  MountVolume.SetUp succeeded for volume "default-token-wmqsh"
+  Normal   Pulling                13m (x4 over 15m)  kubelet, gke-cluster-default-pool-f36f10c0-2clx  pulling image "gcr.io/my-frontend-image:master"
+  Warning  Failed                 13m (x4 over 15m)  kubelet, gke-cluster-default-pool-f36f10c0-2clx  Failed to pull image "gcr.io/my-frontend-image:master": rpc error: code = Unknown desc = Error response from daemon: Get https://gcr.io/v2/my-frontend-image/manifests/master: denied: Token exchange failed for project 'my-frontend-image'. Please enable or contact project owners to enable the Google Container Registry API in Cloud Console at https://console.cloud.google.com/apis/api/containerregistry.googleapis.com/overview?project=my-frontend-image before performing this operation.
+  Warning  Failed                 13m (x4 over 15m)  kubelet, gke-cluster-default-pool-f36f10c0-2clx  Error: ErrImagePull
+  Normal   BackOff                13m (x6 over 15m)  kubelet, gke-cluster-default-pool-f36f10c0-2clx  Back-off pulling image "gcr.io/my-frontend-image:master"
+  Warning  Failed                 4m (x41 over 15m)  kubelet, gke-cluster-default-pool-f36f10c0-2clx  Error: ImagePullBackOff
+
+
+Name:           dockup-1-developer24-deployment-7987bb848-4kjnn
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer24
+                deployment_id=1
+                pod-template-hash=354366404
+Annotations:    <none>
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer24-deployment-7987bb848
+Containers:
+  developer24:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Requests:
+      cpu:  500m
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age                From               Message
+  ----     ------            ----               ----               -------
+  Warning  FailedScheduling  3m (x37 over 13m)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer25-deployment-665cf67577-2lvtc
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer25
+                deployment_id=1
+                pod-template-hash=2217923133
+Annotations:    <none>
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer25-deployment-665cf67577
+Containers:
+  developer25:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Limits:
+      cpu:     500m
+      memory:  1G
+    Requests:
+      cpu:     500m
+      memory:  1G
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Guaranteed
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age               From               Message
+  ----     ------            ----              ----               -------
+  Warning  FailedScheduling  2m (x26 over 9m)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer26-deployment-66755d87f5-drznx
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer26
+                deployment_id=1
+                pod-template-hash=2231184391
+Annotations:    <none>
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer26-deployment-66755d87f5
+Containers:
+  developer26:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Limits:
+      cpu:  500m
+    Requests:
+      cpu:  500m
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age               From               Message
+  ----     ------            ----              ----               -------
+  Warning  FailedScheduling  2m (x26 over 8m)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer27-deployment-5fdc6569cf-gf2wj
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer27
+                deployment_id=1
+                pod-template-hash=1987212579
+Annotations:    <none>
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer27-deployment-5fdc6569cf
+Containers:
+  developer27:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Limits:
+      memory:  1G
+    Requests:
+      cpu:     500m
+      memory:  1G
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age               From               Message
+  ----     ------            ----              ----               -------
+  Warning  FailedScheduling  1m (x26 over 7m)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer29-deployment-547ddcdc77-bs5t4
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer29
+                deployment_id=1
+                pod-template-hash=1038878733
+Annotations:    <none>
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer29-deployment-547ddcdc77
+Containers:
+  developer29:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Limits:
+      cpu:     500m
+      memory:  1G
+    Requests:
+      cpu:     500m
+      memory:  1G
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Guaranteed
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age               From               Message
+  ----     ------            ----              ----               -------
+  Warning  FailedScheduling  32s (x8 over 1m)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer30-deployment-9d98897c7-pms2j
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer30
+                deployment_id=1
+                pod-template-hash=585445373
+Annotations:    kubernetes.io/limit-ranger=LimitRanger plugin set: cpu request for container developer30
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer30-deployment-9d98897c7
+Containers:
+  developer30:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Requests:
+      cpu:  100m
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age                From               Message
+  ----     ------            ----               ----               -------
+  Warning  FailedScheduling  27s (x7 over 58s)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
+
+
+Name:           dockup-1-developer31-deployment-784b766d6-q7qs5
+Namespace:      default
+Node:           <none>
+Labels:         app=dockup-1-developer31
+                deployment_id=1
+                pod-template-hash=340632282
+Annotations:    kubernetes.io/limit-ranger=LimitRanger plugin set: cpu request for container developer31
+Status:         Pending
+IP:             
+Controlled By:  ReplicaSet/dockup-1-developer31-deployment-784b766d6
+Containers:
+  developer31:
+    Image:      gcr.io/my-frontend-image:master
+    Port:       80/TCP
+    Host Port:  0/TCP
+    Command:
+      node
+    Args:
+      ./run
+      --production
+    Limits:
+      memory:  1G
+    Requests:
+      cpu:     100m
+      memory:  500M
+    Environment:
+      FOO:  BAR
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-wmqsh (ro)
+Conditions:
+  Type           Status
+  PodScheduled   False 
+Volumes:
+  default-token-wmqsh:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-wmqsh
+    Optional:    false
+QoS Class:       Burstable
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason            Age               From               Message
+  ----     ------            ----              ----               -------
+  Warning  FailedScheduling  8s (x6 over 23s)  default-scheduler  0/1 nodes are available: 1 Insufficient cpu.
